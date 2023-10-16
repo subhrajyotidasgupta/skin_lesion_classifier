@@ -58,7 +58,7 @@ The confusion matrix:
 We observe that this data is challenging becuase of the major data imbalance problem that it has. We mainly tried 2 options to counter that - oversampling and class-weighted loss. However, solving class-imbalance is still an open problem and further methods like using synthetic data, undersampling majority classes, "data mixup", etc. can be some tricks to improve performance of the CNN model.  
 
 ## 3. Explainability
-We visualize one of the intermediate layers(# 24) of the CNN to check the feature maps. The result is plotted below:
+We visualize one of the intermediate layers(# 24) of the CNN to check the feature maps. The 1st channel of all the feature maps in the layer is plotted below:
 
 ![cnn intermediate](imgs/cnn_intermediate.png)
 

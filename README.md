@@ -3,10 +3,10 @@ This repository contains the code for skin lesion classification on the [ISIC 20
 
 ## 1. Multiclass Classification 
 First, a multiclass classification on the task in performed with 8 classes - 'MEL', 'SCC', 'VASC', 'AK', 'NV', 'BKL', 'DF', 'BCC'. The notebook can be found in `skin_lesion_mul.ipynb`. We do some initial data exploration to view the samples:
-![MEL](imgs/sample_1.png)
-![SCC](imgs/sample_2.png)
-![VASC](imgs/sample_3.png)
-![NV](imgs/sample_4.png)
+
+<img src="imgs/sample_1.png" alt="drawing" width="200"/> <img src="imgs/sample_3.png" alt="drawing" width="200"/> 
+
+<img src="imgs/sample_2.png" alt="drawing" width="200"/> <img src="imgs/sample_4.png" alt="drawing" width="200"/>
 
 We use a pre-trained VGG16 architecture for the classification task. We finetune the model on the skin lesion data for 5 epochs. 
 
@@ -26,13 +26,13 @@ Second, we perform a binary classification task where 'SCC' and 'VASC' are treat
 
 We do an initial experiment with a conventional cross-entropy loss and find that although the majority class performs very well(with 95% F1 score), the minority class only achieves 33% F1 score. A detailed performance is presented below:
 
-![alt text](imgs/report_bin_vanilla.png)
+<img src="imgs/report_bin_vanilla.png" alt="drawing" width="500"/>
 
 [NOTE]: In all the experiments with binary classification, the recall values of the `NT` and `T` classes represent the **specificity** and **sensitivity** respectively.  
 
 The confusion matrix:
 
-![alt text](imgs/report_bin_vanilla.png)
+![alt text](imgs/bin_conf_mat_vanilla.png)
 
 Thus, to improve the performance we test 2 strategies here:
 - Oversampling: Here we oversample the data using several techniques like:

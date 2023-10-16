@@ -4,9 +4,9 @@ This repository contains the code for skin lesion classification on the [ISIC 20
 ## 1. Multiclass Classification 
 First, a multiclass classification on the task in performed with 8 classes - 'MEL', 'SCC', 'VASC', 'AK', 'NV', 'BKL', 'DF', 'BCC'. The notebook can be found in `skin_lesion_mul.ipynb`. We do some initial data exploration to view the samples:
 
-<img src="imgs/sample_1.png" alt="drawing" width="200"/> <img src="imgs/sample_3.png" alt="drawing" width="200"/> 
+<img src="imgs/sample_1.png" alt="drawing" width="250"/> <img src="imgs/sample_3.png" alt="drawing" width="250"/> 
 
-<img src="imgs/sample_2.png" alt="drawing" width="200"/> <img src="imgs/sample_4.png" alt="drawing" width="200"/>
+<img src="imgs/sample_2.png" alt="drawing" width="250"/> <img src="imgs/sample_4.png" alt="drawing" width="250"/>
 
 We use a pre-trained VGG16 architecture for the classification task. We finetune the model on the skin lesion data for 5 epochs. 
 
@@ -20,7 +20,7 @@ Here's the confusion matrix:
 
 
 ## 2. Binary Classification
-Second, we perform a binary classification task where 'SCC' and 'VASC' are treated as 'Non-tumour' (marked as `NT` in the notebook) category and the rest are 'Tumour' (marked as T in the notebook) category. Some initial data exploration shows that there is a huge imbalance in the data as shown below:
+Second, we perform a binary classification task where 'SCC' and 'VASC' are treated as 'Non-tumour' (marked as `NT` in the notebook) category and the rest are 'Tumour' (marked as T in the notebook) category. The notebooks can be found in `skin_lesion_bin.ipynb` and `skin_lesion_bin_oversample.ipynb` (2 separate notebooks were made only to facilitate parallel GPU training). Some initial data exploration shows that there is a huge imbalance in the data as shown below:
 
 ![class imbalance](imgs/class_dist.png)
 

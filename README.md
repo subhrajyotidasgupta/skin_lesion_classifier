@@ -40,7 +40,8 @@ Thus, to improve the performance we test 2 strategies here:
     - Vertical flipping
     - Horizontal flipping
     - Translation
-    - Adding Gaussian noise 
+    - Adding Gaussian noise
+      
     The class distribution improves 8-fold as in:
     
     ![distribution after oversampling](imgs/class_dist_oversample.png)

@@ -20,7 +20,7 @@ Here's the confusion matrix:
 
 
 ## 2. Binary Classification
-Second, we perform a binary classification task where 'SCC' and 'VASC' are treated as 'Non-tumour' (marked as `NT` in the notebook) category and the rest are 'Tumour' (marked as T in the notebook) category. The notebooks can be found in `skin_lesion_bin.ipynb` and `skin_lesion_bin_oversample.ipynb` (2 separate notebooks were made only to facilitate parallel GPU training). Some initial data exploration shows that there is a huge imbalance in the data as shown below:
+Second, we perform a binary classification task where 'SCC' and 'VASC' are treated as 'Non-tumour' (marked as `NT` in the notebooks) category and the rest are 'Tumour' (marked as `T` in the notebooks) category. The notebooks can be found in `skin_lesion_bin.ipynb` and `skin_lesion_bin_oversample.ipynb` (2 separate notebooks were made only to facilitate parallel GPU training). Some initial data exploration shows that there is a huge imbalance in the data as shown below:
 
 ![class imbalance](imgs/class_dist.png)
 

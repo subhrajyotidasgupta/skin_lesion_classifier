@@ -46,7 +46,12 @@ Thus, to improve the performance we test 2 strategies here:
     
     ![distribution after oversampling](imgs/class_dist_oversample.png)
     
-    We find that training the model on the oversampled data does improve the performance of the model, especially boosting the performance on the minority class(`NT`).
+    We find that training the model on the oversampled data does improve the performance of the model, especially boosting the performance on the minority class(`NT`). The classification report and confusion matrix is presented below:
+  
+  <img src="imgs/report_bin_oversample.png" alt="drawing" width="500"/>
+
+  ![alt text](imgs/bin_conf_mat_oversample.png)
+  
 - Class-weighted loss: Next, we try a weighted loss based on the distribution of samples between the 2 classes. In brief, since the minority class has lesser no. of samples, the model will be penalized more if it makes a wrong prediction on the minority class. Similarly, if it gives correct prediction on the minority class, it will be rewarded more than the majority class. With this strategy, we find the performance of the model improves greatly compared to the initial vanilla model and relatively slightly as compared to the oversampling strategy. A detailed performance is presented below:
 
 <img src="imgs/report_bin_w_loss.png" alt="drawing" width="500"/>
